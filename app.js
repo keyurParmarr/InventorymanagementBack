@@ -17,9 +17,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use("/upload", express.static(path.join(__dirname, "uploads")));
-// app.get("/", (req, res) => {
-//   res.send("hello");
-// });
 app.use("/api/user", userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/contactus", contactRoute);
