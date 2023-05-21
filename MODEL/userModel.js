@@ -12,7 +12,7 @@ const userSchema = mongoose.Schema(
       unique: true,
       trim: true,
       match: [
-        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
         "Please enter an valid email",
       ],
     },
@@ -20,7 +20,6 @@ const userSchema = mongoose.Schema(
       type: String,
       required: [true, "Please Write an Password"],
       minlength: [6, "Password must not be up to 6 Characters"],
-      // maxlength: [15, "Password must not be up to 15 Characters"],
     },
     photo: {
       type: String,

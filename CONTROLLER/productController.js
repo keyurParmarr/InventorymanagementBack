@@ -95,7 +95,6 @@ const updateProduct = asyncHandler(async (req, res) => {
       folder: "UPLOADS",
       resource_type: "image",
     });
-    console.log(req.file.path);
   } catch (error) {
     console.log(error);
     res.status(500);
